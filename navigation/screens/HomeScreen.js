@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
+import colors from '../colors';
 export default function HomeScreen({ navigation }) {
     return (
         <View style={[styles.container, { flexDirection: 'column', }]}>
@@ -15,31 +16,27 @@ export default function HomeScreen({ navigation }) {
     );
 }
 
-const greenButton = "#534E24";
-const backgroundColor = '#324E19';
-const greenBg = "#2B3224";
-const fontColorOnBg = "#E1DCC1";
-const whiteZone = '#E9E9E9';
 
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: greenBg,
+        backgroundColor: colors.greenBg,
         alignItems: 'center',
         height: '100%',
         width: '100%',
     },
     textContainer: {
         alignItems: 'center',
-        backgroundColor: whiteZone,
+        backgroundColor: colors.whiteZone,
         width: '100%',
-        height: '50%'
+        //height: '50%'
     },
     textPresentation: {
         fontSize: 20,
-        color: backgroundColor,
+        color: colors.backgroundColor,
         fontFamily: 'BlackOpsOne',
-        marginTop: 5,
+        marginTop: 2,
+
 
     },
     flagImage: {
@@ -48,11 +45,11 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     buttonHomePage: {
-        backgroundColor: greenButton,
+        backgroundColor: colors.greenButton,
         alignItems: 'center',
         justifyContent: 'center',
         width: '80%',
-        height: '5%',
+        height: '6%',
         borderRadius: 30,
         marginTop: "10%",
         marginBottom: "10%",
@@ -63,7 +60,7 @@ const styles = StyleSheet.create({
         fontSize: 22,
     },
     textAffiche: {
-        color: fontColorOnBg,
+        color: colors.fontColorOnBg,
         fontSize: 22,
         fontFamily: 'AlegreyaSansSC',
         textAlign: 'center',

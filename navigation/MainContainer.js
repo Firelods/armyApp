@@ -7,11 +7,13 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from './screens/HomeScreen';
 import DetailsScreen from './screens/DetailsScreen';
 import SettingsScreen from './screens/SettingsScreen';
-
+import GlossaireScreen from './screens/GlossaireScreen';
 //Screen names
 const homeName = "Home";
 const detailsName = "Details";
 const settingsName = "Settings";
+const glossaireName = "Glossaire";
+
 
 const Tab = createBottomTabNavigator();
 
@@ -51,6 +53,11 @@ export default function MainContainer() {
                 <Tab.Screen options={{ headerShown: false }} name={homeName} component={HomeScreen} />
                 <Tab.Screen options={{ headerShown: false }} name={detailsName} component={DetailsScreen} />
                 <Tab.Screen options={{ headerShown: false }} name={settingsName} component={SettingsScreen} />
+                <Tab.Screen options={{
+                    tabBarButton: (props) => null, //like this
+                    tabBarStyle: { display: 'none' }, //this is additional if you want to hide the whole bottom tab from the screen version 6.x
+                    headerShown: false,
+                }} name={glossaireName} component={GlossaireScreen} />
 
             </Tab.Navigator>
         </NavigationContainer>
